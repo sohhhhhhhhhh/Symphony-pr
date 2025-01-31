@@ -150,6 +150,7 @@
       <path value="$PROJECT_DIR$/Symphony_pr/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/Symphony_pr/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/Symphony_pr/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Symphony_pr/vendor/symfony/asset" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

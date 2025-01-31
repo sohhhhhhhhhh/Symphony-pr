@@ -19,6 +19,17 @@ class Stock
     #[ORM\Column(length: 255)]
     private ?string $ticker = null;
 
+    #[ORM\Column(type: 'decimal', precision: 10, scale: 2, nullable: true)]
+    private ?string $currentPrice = null;
+
+    // Constructor
+    public function __construct()
+    {
+
+    }
+
+    // Getters and Setters
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,10 +40,9 @@ class Stock
         return $this->name;
     }
 
-    public function setName(string $name): static
+    public function setName(string $name): self
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -41,10 +51,21 @@ class Stock
         return $this->ticker;
     }
 
-    public function setTicker(string $ticker): static
+    public function setTicker(string $ticker): self
     {
         $this->ticker = $ticker;
-
         return $this;
     }
+
+    /**
+     * Get the current price of the stock.
+     */
+    public function getCurrentPrice(): ?string
+    {
+        return $this->currentPrice;
+    }
+
+    /**
+     * Set the current price of the stock.
+     */
 }
